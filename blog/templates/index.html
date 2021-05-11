@@ -1,0 +1,58 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+
+          <div class="main-logo">
+                <img class="img-logo" src="../static/images/logo.png" alt="">
+            </div>
+            <div class="title">
+                <h1>Blog (Parciltron based). </h1>
+                 
+            </div>
+
+            
+            <div class="slider">
+                    <div class="slider-image">
+                        <img src="../static/images/tehno coin.png" alt="" class="active">
+                        <img src="../static/images/f91f601a-aa7e-485d-83a0-34ef17bdd6ef_1920x1080.jpg" alt="">
+                        <img src="../static/images/university.logo_.small_.vertical.white_.png" alt="">
+                    </div>
+                    <div class="slider-buttons">
+                        <div class="btn-prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                        <div class="btn-next"><i class="fas fa-chevron-right"></i>
+                            </div>
+                    </div>
+                </div>
+            
+                <div class="users">
+                    <div class="row block1 ">
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/avatar.png" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/einstein3.jpg" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/LOGORIP.png" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/Снимок.PNG" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/4840b39aa6fbf39fa1461ace3f28bb04.jpg" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/48201603.png" alt=""></a></div>
+                    </div>
+                    <div class="row block1 ">
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/avatar.png" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/einstein3.jpg" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/LOGORIP.png" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/Снимок.PNG" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/4840b39aa6fbf39fa1461ace3f28bb04.jpg" alt=""></a></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/48201603.png" alt=""></a></div>
+                    </div>
+                    
+                </div>
+{%endblock%}

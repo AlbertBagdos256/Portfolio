@@ -1,0 +1,46 @@
+{% extends "base.html" %} 
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/profile.css')}}">
+
+    <title>Document</title>
+</head>
+<body>
+  <div class="content">
+          <div class="Username">
+        <p class="nickname">{{ current_user.username }}</p>
+    </div>
+    <div class="User_data">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6"><img class="profile-image" src="../static/images/pavlissio.jpg" alt=""></div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 info">
+                <div class="main"> 
+                <p>{{ current_user.username }}</p>
+                <p>march 14, 1879</p>
+               </div>
+               <div class="secret-info">
+                   <p>{{ current_user.email }}</p>
+                   <p>posts: 20</p>
+               </div>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+
+    
+    
+</body>
+</html>
+
+   
+{% endblock content %}
+

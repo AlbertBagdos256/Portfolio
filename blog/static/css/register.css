@@ -1,0 +1,92 @@
+body {
+  background: #101014;
+  font-family: 'Righteous';
+  overflow-x: hidden;
+}
+.reg {
+  color: #B1B0BE;
+  
+  padding-top: 6px;
+  font-size: 31px;
+  /* margin-left: 3px; */
+
+}
+.title {
+  justify-content: center;
+  margin: auto;
+  margin-left: 27%;
+  padding: 150px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  padding-left: 10%;
+}
+.logo1 {
+height: 50px;    
+}
+
+img {
+  height: 50px;
+}
+
+
+
+p {
+  color: #B1B0BE;
+  font-weight: 100;
+}
+
+.avatar {
+  padding: 0;
+  padding-left: 8%;
+}
+.photo {
+  height: 30px;
+  border: 0px solid white;
+  border-radius: 50%;
+}
+.content {
+  justify-content: center;
+  margin: auto;
+  margin-left: 30%;
+  padding: 150px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-left: 5%;
+}
+
+.form {
+  margin-left: 8%;
+  margin-top: 4%;
+}
+
+.user-input {
+  background: #242428;
+  border: 0;
+  border-radius: 7px;
+  width: 294px;
+  height: 32px;
+  outline: none;
+  color: aliceblue;
+}
+i {
+  font-size: 23px !important;
+  color: #242428;
+}
+input {
+  padding-left:13px ;
+}
+.av {
+  width: 5.6% !important;
+  padding-top: 4px;
+}
+.button {
+  text-align: center;
+  width: 336px !important;
+  margin-top: 23px;
+  margin-left: 56px;
+  background: #4D1B24;
+  color: #fff;
+}   
+button {
+  color: #fff !important;
+}

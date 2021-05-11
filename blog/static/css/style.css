@@ -1,0 +1,141 @@
+
+.main-logo {
+    text-align: center;
+  }
+  .img-logo {
+    height: 135px;
+  }
+  .title {
+    text-align: center;
+ 
+  }
+  
+h1 {
+    font-size: 50px;
+}
+
+    
+.slider {
+    position: relative;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 1000px;
+    margin: auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+    height: 400px;
+    margin-top: 50px !important;
+}
+.slider-image {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.slider img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.slider img.active {
+    opacity: 1;
+}
+.slider-buttons {
+    position: absolute;
+    bottom: 150px;
+    width: 50%;
+    text-align: center !important;
+}
+.slider-buttons .btn {
+    width: 60px;
+    height: 40px;
+    text-transform: uppercase;
+  
+}
+.btn-prev {
+    position: absolute;
+    left: 5%;
+    cursor: pointer;
+}
+.btn-next {
+    margin-left: 190%;
+    cursor: pointer;
+}
+i {
+    color: #fff;
+    font-size: 30px;
+}
+.block1 {
+    margin-left: 10% !important;
+    margin-top: 30px !important;
+}
+.avatar {
+    border: 2px solid white;
+    border-radius: 100px;
+    width: 63.73px;
+    height: 63.32px;
+}
+
+.col-lg-2 {
+    width: 7.6% !important;
+}
+
+/* media */
+
+@media(max-width:900px) {
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media(max-width:750px) {
+    .slider {
+        height: 280px;
+    }
+    .slider-buttons {
+        bottom: 110px;
+    }
+}
+@media(max-width:500px) {
+    .slider {
+        height: 230px;
+    }
+    .slider-buttons {
+        bottom: 80px;
+    }
+}
+@media(max-width:1200px) {
+    .block1 {
+        margin-left: 0% !important;
+    }
+}
+@media(max-width:900px) {
+    .col-lg-2 {
+     width: 10.6% !important;   
+    }
+}
+@media(max-width:800px) {
+    .col-lg-2 {
+     width: 13.6% !important;   
+    }
+    .avatar {
+        height: 47px;
+        width: 47px;
+    }
+}
+@media(max-width:500px) {
+    .col-lg-2 {
+     width: 15.6% !important;   
+    }
+    .avatar {
+        height: 47px;
+        width: 47px;
+    }
+    .block1 {
+        margin-left: -5% !important;
+    }
+}

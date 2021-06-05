@@ -49,6 +49,17 @@ def logout():
     return redirect(url_for('index'))
 
 
+def Pics_to_db(form_picture):
+    random_hex = secrets.token_hex(8)
+    _, f_ext = os.path.splitext(form_picture.filename)
+    picture_fn = random_hex + f_ext
+    picture_path = os.path.join(app.root_path, 'static/images/users_avatars', picture_fn)    
+    i = Image.open(form_picture)
+    i.save(picture_path)
+    return picture_fn
+
+
+
 @app.route("/account", methods=['GET', 'POST'])
 @login_required
 def account():

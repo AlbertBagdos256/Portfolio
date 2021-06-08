@@ -1,0 +1,247 @@
+body {
+    overflow-x: hidden !important;
+}
+
+.profile-image {
+    width: 478px;
+    height: 250px;
+    
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+.nickname {
+    font-size: 50px;
+    font-weight: 500;
+    color: #000;
+   
+}
+.content {
+    
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    background: #F1F1F1;
+}
+.info {
+    background: #F1F1F1;
+    text-align: left;
+}
+.main {
+    padding-top: 5%;
+    padding-left: 2%;
+}
+
+.secret-info {
+    padding-left: 2%;
+    
+}
+
+.pics {
+    
+    width: 201px;
+    height: 179px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+
+.profile-image_small {
+    width: 250px;
+    margin-top: 40px;
+    margin: auto;
+}
+.title {
+    font-weight: 500;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+color: #000000;
+margin-top: 80px;
+}
+.form{
+    margin-top: 10px;
+}
+
+.forms {
+    width: 450px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+p{
+    margin: 0;
+    font-weight: 100;
+    padding: 0;
+}
+.inputs {
+    width: 450px;
+    height: 35px;
+    background: #F1F1F1;
+    backdrop-filter: blur(4px);
+    border: none;
+    margin-top: 5px;
+}
+
+.update_window {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    
+    background: white;
+    width: 80%;
+    height: 100%;
+    opacity: 0;
+    
+    transition: 1s;
+}
+
+
+
+.button {
+    text-align: center;
+    width: 156px !important;
+    font-size: 20px;
+    margin: auto;
+    background: #4D1B24;
+    color: #fff;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+  }   
+  
+  
+  
+  .inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+    z-index: -1;
+    
+}
+
+.inputfile + label {
+    font-size: 15px;
+    font-weight: 100;
+    margin-left: 50px;
+    color: #000;
+    cursor: pointer;
+    background-color: #f1f1ff65;
+    display: inline-block;
+}
+
+.card {
+    max-width: 960px !important;
+    margin-top: 100px;
+    margin-left: 30px;
+ }
+
+h1 {
+    margin-top: 40px;
+}
+.btn {
+    color: #fff !important;
+}
+.delete {
+    background: rgb(107, 6, 25) !important;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.update {
+    background: rgb(18, 18, 126) !important;
+    margin-top: 25px;
+}
+.details {
+    background: burlywood !important;
+    margin-top: 25px;
+}
+
+img{
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+@media(max-width: 800px) {
+    .profile-image {
+        width: 300px;
+        height: 250px;
+    }
+}
+@media(max-width: 600px) {
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border: 1px solid white;
+        border-radius: 50%;
+        }
+    .content {
+        background: #fff;
+        
+    }
+    .info {
+        background: #F1F1F1;
+    }
+}
+@media(max-width: 400px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border: 1px solid white;
+        border-radius: 50%;
+        }
+    .content {
+        background: #fff;
+        
+    }
+    .info {
+        background: #F1F1F1;
+        height: 180px;
+    }
+    .nickname {
+        font-size: 30px;
+    }
+    p {
+        margin-top: -5px;
+        font-size: 14px;
+        
+    }
+}
+
+
+.settings{
+    height: 50px;
+    width: 50px;
+    background: #000;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+}
+
+.crt {
+    margin-top: 90px !important;
+    text-align: center;
+    width: 156px !important;
+    font-size: 20px;
+    background: #4D1B24;
+    color: #fff;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+i {
+    font-size: 23px;
+    color: #fff;
+    padding-top: 25%;
+    
+}

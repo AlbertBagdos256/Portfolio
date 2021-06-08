@@ -1,0 +1,130 @@
+{% extends "base.html" %} 
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/profile.css')}}">
+
+    <title>Document</title>
+</head>
+<body>
+  <div class="content">
+          <div class="Username">
+        <p class="nickname">{{ current_user.username }}</p>
+    </div>
+    
+    <div class="User_data">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                <img class="profile-image" src="{{ image_file }}" alt="">
+            
+                </div>   
+            
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 info">
+                <div class="main"> 
+                <p>{{ current_user.username }}</p>
+                <p>march 14, 1879</p>
+               </div>
+               <div class="secret-info">
+                   <p>{{ current_user.email }}</p>
+                   <p>posts: 20</p>
+               </div>
+            </div>
+            
+        </div>
+       
+    </div>
+  </div>
+  <div class="settings" onclick = "changeVis()">
+    <i class="fa fa-cog" aria-hidden="true"></i>
+  </div>
+  <div class="update_window">
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+        <p class="title">Update Account Information</p>
+        <div class="profile-image_small">
+            <img  class="pics" src="{{image_file}}" alt="">
+                    {{ form.picture( class="inputfile", type="file", id="file") }}
+                    <label for="file">Choose a file</label>
+                    {% if form.picture.errors %}
+                        {% for error in form.picture.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+        </div>
+        <div class="forms">
+                <div class="form">
+                        <p class="jj">Nickname</p>
+                       {% if form.username.errors %}
+                           {{ form.username(class="inputs") }}
+                           <div class="invalid-feedback">
+                               {% for error in form.username.errors %}
+                                   <span>{{ error }}</span>
+                               {% endfor %}
+                           </div>
+                       {% else %}
+                           {{ form.username(class="inputs") }}
+                       {% endif %}
+                </div>
+                <div class="form">
+                        <p class="jj">Email</p>
+                        {% if form.email.errors %}
+                            {{ form.email(class="inputs") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email(class="inputs") }}
+                        {% endif %}
+                    </div>
+                
+        </div>
+        <div class="button">
+                {{ form.submit(class="btn") }}  
+            </div>
+        </form>
+        </div>
+        
+ 
+        <h1>Posts</h1>
+        
+  <a href="{{url_for('create_post')}}"><div class=" crt">create_post</div></a>      
+  
+  {% for post in current_user.posts %}
+ <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img  class="post_img" src="../static/images/tehno coin.png" alt="...">
+                    {% if post.author == current_user%}
+                    <a href="#"><button class="btn delete">delete</button></a>
+                    <button class="btn update">update</button>
+                    <button class="btn details">details</button>
+                    {%endif%}
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{post.title}}</h5>
+                      <p class="card-text">{{post.content}}</p>
+                      <p class="card-text"><small class="text-muted">{{post.date_posted}}</small></p>
+                    </div>
+                  </div>
+                </div>
+    </div>
+     {%endfor%}   
+        
+       
+        
+</body>
+</html>
+
+   
+{% endblock content %}
+

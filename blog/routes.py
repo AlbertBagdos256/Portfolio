@@ -1,7 +1,7 @@
 # custom
 from blog.models import User, Post
 from blog import app,db,bcrypt
-from blog.forms_valid import RegistrationForm, LoginForm, UpdateAccountForm
+from blog.forms_valid import RegistrationForm, LoginForm, UpdateAccountForm,PostForm
 
 # system
 import secrets
@@ -84,8 +84,20 @@ def account():
                            image_file = image_file, form = form)
 
 
+@app.route("/user/<username>", methods = ['GET','POST'])
+
+def user(username):
+    user_data = User.query.filter_by(username = username).all()
+    
+    for content in  user_data:
+        username = content.username
+        email    = content.email
+        img_file = content.image_file
+    
+    image_path = url_for('static', filename = 'images/users_avatars/' + img_file)
+    return render_template('user.html', username = username, email = email, image_path = image_path)
                  
-@app.route("/post/new", methods=['GET', 'POST'])
+@app.route("/post/new", methods = ['GET', 'POST'])
 @login_required
 def create_post():
     form = PostForm()
@@ -94,9 +106,9 @@ def create_post():
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
-        return redirect(url_for('home'))
-    return render_template('create_post.html', title='New Post',
-                           form=form, legend='New Post')
+        return redirect(url_for('account'))
+    return render_template('create_post.html', form = form, current_user = current_user,
+                            Post = Post)
 
 
 @app.route("/post/<int:post_id>")

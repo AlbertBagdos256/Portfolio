@@ -15,6 +15,7 @@ def index():
     return render_template('index.html')  
 
 
+
 @app.route("/register", methods = ['GET', 'POST'])
 def register():
     if current_user.is_authenticated:

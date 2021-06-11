@@ -33,16 +33,3 @@ function SlideNext() {
 }
 setInterval(SlideNext, 5000);
 
-/* FILE LOADER */
-function myAnalyser() {
-    document.querySelector('.uploader div').style.display = 'none';
-    //Hide the main division
-    document.querySelector('.uploader').classList.add('spinner-1');
-    // Server request
-    setTimeout(() => {
-        document.querySelector('.uploader').classList.remove('spinner-1');
-        //Remove the animation
-        document.querySelector('.uploader div').style.display = 'block';
-        //Show the main division
-    },5000);//Number of seconds to last
-}

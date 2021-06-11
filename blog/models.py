@@ -1,7 +1,16 @@
 from flask import request
-from blog import db,login_manager
 from datetime import datetime
 from flask_login import UserMixin
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+from flask_bcrypt import Bcrypt
+
+db = SQLAlchemy()
+bcrypt = Bcrypt()
+
+login_manager = LoginManager()
+login_manager.login_view = 'users.login'
+login_manager.login_message_category = 'info'
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -13,12 +22,13 @@ class User(db.Model,UserMixin):
     id         = db.Column(db.Integer, primary_key = True)
     username   = db.Column(db.String(20), unique   = True, nullable = False)
     email      = db.Column(db.String(120), unique  = True, nullable = False)
-    image_file = db.Column(db.String(20), nullable = False, default = 'default.jpg')
+    image_file = db.Column(db.String(20), nullable = False, default = 'undefined.jpg')
     password   = db.Column(db.String(60), nullable = False)
     posts      = db.relationship('Post', backref   = 'author', lazy = True)
     
     def __repr__(self):
         return f"User('{self.username}', '{self.email}', '{self.image_file}')"
+
 
 
 class Post(db.Model):
@@ -31,3 +41,4 @@ class Post(db.Model):
     
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+

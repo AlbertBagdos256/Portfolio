@@ -23,11 +23,6 @@ def create_post():
                             Post = Post)
 
 
-@posts.route("/post/<int:post_id>")
-def post(post_id):
-    post = Post.query.get_or_404(post_id)
-    return render_template('post.html', title=post.title, post=post)
-
 
 @posts.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
@@ -41,7 +36,7 @@ def update_post(post_id):
         post.content = form.content.data
         db.session.commit()
         flash('Your post has been updated!', 'success')
-        return redirect(url_for('posts.post', post_id=post.id))
+        return redirect(url_for('users.account', post_id=post.id))
     elif request.method == 'GET':
         form.title.data = post.title
         form.content.data = post.content
@@ -58,4 +53,11 @@ def delete_post(post_id):
     db.session.delete(post)
     db.session.commit()
     flash('Your post has been deleted!', 'success')
-    return redirect(url_for('main.index'))
+    return redirect(url_for('users.account'))
+    
+    
+@posts.route('/posts', methods=['GET','POST'])
+
+def posts_list():
+    posts_list = Post.query.all()
+    return render_template('posts.html',posts_list = posts_list)

@@ -90,3 +90,27 @@ input {
 button {
   color: #fff !important;
 }
+
+
+
+
+
+@media(max-width:500px) {
+ .logo1 {
+   margin-top: -40px;
+ }
+  .reg {
+    padding-top: 27px;
+  margin-left: -48%;
+  }
+  .content {
+    margin-left: 4%;
+  }
+  .form {
+    margin-top: 10%;
+  }
+  .button {
+    margin-left: 90px;
+    width: 200px !important;
+  }
+}

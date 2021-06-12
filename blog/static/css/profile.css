@@ -167,6 +167,17 @@ img{
     border-radius: 10px;
 }
 
+.post {
+    background: #4D1B24 !important;
+}
+.block {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+}
+
+
+
 @media(max-width: 800px) {
     .profile-image {
         width: 300px;
@@ -246,11 +257,3 @@ i {
     
 }
 
-.post {
-    background: #4D1B24;
-}
-.block {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-}

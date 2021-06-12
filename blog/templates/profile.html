@@ -95,9 +95,14 @@
         
  
         <h1>Posts</h1>
-        
-  <a href="{{url_for('posts.create_post')}}"><div class=" crt">create_post</div></a>      
-  
+       
+       
+    <section class="posts">
+        <div class="block">
+            <a href="{{url_for('posts.create_post')}}"><button class="btn post"><i class="fa fa-align-center" aria-hidden="true"></i></button></a>
+ 
+        </div>
+           
   {% for post in current_user.posts %}
  <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
@@ -119,10 +124,12 @@
                 </div>
     </div>
      {%endfor%}   
-        
-       
+    </section>    
+     
         
 </body>
 </html>
+
+   
 {% endblock content %}
 

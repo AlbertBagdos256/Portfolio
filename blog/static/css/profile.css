@@ -245,3 +245,12 @@ i {
     padding-top: 25%;
     
 }
+
+.post {
+    background: #4D1B24;
+}
+.block {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+}

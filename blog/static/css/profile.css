@@ -289,7 +289,7 @@ i {
        margin-left: 71px;
    }
    .forms {
-    width: 400px;
+    width: 360px !important;
 }
    .inputs {
     width: 300px;

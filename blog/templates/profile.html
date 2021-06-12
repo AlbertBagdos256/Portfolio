@@ -50,7 +50,7 @@
         <p class="title">Update Account Information</p>
         <div class="profile-image_small">
             <img  class="pics" src="{{image_file}}" alt="">
-                    {{ form.picture( class="inputfile", type="file", id="file") }}
+                    {{ form.picture( class="inputfile", id="file") }}
                     <label for="file">Choose a file</label>
                     {% if form.picture.errors %}
                         {% for error in form.picture.errors %}

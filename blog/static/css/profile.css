@@ -168,16 +168,61 @@ img{
 }
 
 
+.settings{
+    height: 50px;
+    width: 50px;
+    background: #000;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+}
+
+.crt {
+    margin-top: 90px !important;
+    text-align: center;
+    width: 156px !important;
+    font-size: 20px;
+    background: #4D1B24;
+    color: #fff;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+i {
+    font-size: 23px;
+    color: #fff;
+    padding-top: 25%;
+    
+}
 
 .post {
-    background: #4D1B24 !important;
+    background: #4D1B24;
 }
 .block {
     position: fixed;
     bottom: 80px;
     right: 20px;
+    z-index: 10;
 }
-
+.mobile-settings {
+    display: none;
+    height: 50px;
+    width: 50px;
+    background: #000;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+}
 
 @media(max-width: 800px) {
     .profile-image {
@@ -224,37 +269,29 @@ img{
         
     }
 }
-
-
-.settings{
-    height: 50px;
-    width: 50px;
-    background: #000;
-    border: 1px solid white;
-    border-radius: 50%;
-    text-align: center;
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
+@media(max-width:1000px) {
+   .update_window {
+       height: 135% !important;
+      
+   }
 }
-
-.crt {
-    margin-top: 90px !important;
-    text-align: center;
-    width: 156px !important;
-    font-size: 20px;
-    background: #4D1B24;
-    color: #fff;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border-radius: 10px;
-    cursor: pointer;
+@media(max-width:500px) {
+   .update_window {
+    width: 94% !important;
+    height: 140%;
+   }
+   .pics {
+       height: 129px;
+       width: 151px;
+       margin-left: 42px;
+   }
+   .label {
+       margin-left: 71px;
+   }
+   .forms {
+    width: 400px;
 }
-
-i {
-    font-size: 23px;
-    color: #fff;
-    padding-top: 25%;
-    
+   .inputs {
+    width: 300px;
 }
-
+}

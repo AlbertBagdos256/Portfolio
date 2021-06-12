@@ -64,7 +64,7 @@ def account():
         form.username.data = current_user.username
         form.email.data = current_user.email
     image_file = url_for('static', filename = 'images/users_avatars/' + current_user.image_file)
-    return render_template('profile.html', title='Account',
+    return render_template('profile.html', title = 'Account',
                            image_file = image_file, form = form)
 
 
@@ -72,12 +72,14 @@ def account():
 
 def user(username):
     user_data = User.query.filter_by(username = username).all()
-    
+    user = User.query.filter_by(username = username).first()
     for content in  user_data:
         username = content.username
         email    = content.email
         img_file = content.image_file
-    
+        
+    posts_list = user.posts
     image_path = url_for('static', filename = 'images/users_avatars/' + img_file)
-    return render_template('user.html', username = username, email = email, image_path = image_path)
-                 
+    return render_template('user.html', username = username, email = email, image_path = image_path,
+                           posts_list = posts_list)
+      

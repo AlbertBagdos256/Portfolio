@@ -276,6 +276,7 @@ i {
    }
 }
 @media(max-width:500px) {
+    
    .update_window {
     width: 94% !important;
     height: 140%;

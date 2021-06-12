@@ -27,7 +27,7 @@
           <div class="col-lg-6 col-md-6 col-sm-6 col-6 info">
               <div class="main"> 
               <p>{{ username }}</p>
-              <p>march 14, 1879</p>
+             
              </div>
              <div class="secret-info">
                  <p>{{ email }}</p>
@@ -40,4 +40,32 @@
   </div>
 </div>
 
+<h1>Posts</h1>
+{% for post in posts_list %}
+<div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img  class="post_img" src="{{image_path}}" alt="...">
+            {% if post.author == current_user%}
+           
+           
+            <a href="{{ url_for('posts.update_post', post_id = post.id) }}"> 
+            <button class="btn update">update</button>
+               </a>
+         
+            <form action="{{ url_for('posts.delete_post', post_id = post.id) }}" method="POST">
+                    <button class="btn delete">delete</button>
+            </form>
+            {%endif%}
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{post.title}}</h5>
+              <p class="card-text">{{post.content}}</p>
+              <p class="card-text"><small class="text-muted">{{post.date_posted}}</small></p>
+            </div>
+          </div>
+        </div>
+</div>
+{%endfor%}
 {% endblock content %}

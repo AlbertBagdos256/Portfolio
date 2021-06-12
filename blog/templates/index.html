@@ -38,21 +38,9 @@
             
                 <div class="users">
                     <div class="row block1 ">
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/avatar.png" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/einstein3.jpg" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/LOGORIP.png" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/Снимок.PNG" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/4840b39aa6fbf39fa1461ace3f28bb04.jpg" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/48201603.png" alt=""></a></div>
-                    </div>
-                    <div class="row block1 ">
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/avatar.png" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/einstein3.jpg" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/LOGORIP.png" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/Снимок.PNG" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/4840b39aa6fbf39fa1461ace3f28bb04.jpg" alt=""></a></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2"><a href=""><img class="avatar" src="../static/images/users_avatars/48201603.png" alt=""></a></div>
-                    </div>
-                    
+                    {% for content in main_list%}
+                        
+                        <div class="col-lg-2 col-md-2 col-sm-2"><a href="{{content[1]}}"><img class="avatar" src="{{content[0]}}" alt=""></a></div>
+                   {%endfor%}     
                 </div>
 {%endblock%}

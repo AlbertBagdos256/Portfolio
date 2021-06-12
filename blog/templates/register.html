@@ -26,19 +26,19 @@
             {{ form.hidden_tag() }}
             <div class="form">
                 <div class="row">
-                    <div class="col-lg-1 av"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-2 av">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    </div>
                     
                     {% if form.username.errors %}
-                    <div class="col-lg-11">
-                     {{ form.username(class="user-input", placeholder='nickname') }}
-                    </div>
+                  
                         <div class="invalid-feedback">
                             {% for error in form.username.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
                         </div>
                     {% else %}
-                    <div class="col-lg-11">
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-10">
                         {{ form.username(class="user-input", placeholder='nickname') }}
                     </div>
                     {% endif %}
@@ -49,7 +49,7 @@
             </div>
             <div class="form">
                 <div class="row">
-                    <div class="col-lg-1 av"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-2 av"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                    
                       {% if form.email.errors %}
                          {{ form.email(class="user-input") }}
@@ -59,7 +59,7 @@
                                 {% endfor %}
                         </div>
                     {% else %}
-                    <div class="col-lg-11">
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-10">
                         {{ form.email(class="user-input",placeholder='email') }}
                     </div>
                     {% endif %}
@@ -69,7 +69,7 @@
             </div>
             <div class="form">
                     <div class="row">
-                        <div class="col-lg-1 av"><i class="fa fa-unlock-alt" aria-hidden="true"></i></div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-2 av"><i class="fa fa-unlock-alt" aria-hidden="true"></i></div>
                         {% if form.password.errors %}
                             {{ form.password(class="user-input") }}
                             <div class="invalid-feedback">
@@ -78,7 +78,7 @@
                                     {% endfor %}
                             </div>
                             {% else %}
-                            <div class="col-lg-11">
+                            <div class="col-lg-11 col-md-11 col-sm-11 col-10">
                                 {{ form.password(class="user-input",placeholder='password') }}
                             </div>
                             {% endif %}
@@ -88,7 +88,7 @@
             </div>
             <div class="form">
                     <div class="row">
-                        <div class="col-lg-1 av"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-2 av"><i class="fa fa-lock" aria-hidden="true"></i></div>
                         {% if form.confirm_password.errors %}
                             {{ form.confirm_password(class="user-input") }}
                             <div class="invalid-feedback">
@@ -97,7 +97,7 @@
                                 {% endfor %}
                             </div>
                         {% else %}
-                        <div class="col-lg-11">
+                        <div class="col-lg-11 col-md-11 col-sm-11 col-10">
                             {{ form.confirm_password(class="user-input",placeholder='confirm password') }}
                         </div>
                         {% endif %}
@@ -117,7 +117,11 @@
         </div>
     
     </div>
-   
+   <pre>
+       
+    
+    
+   </pre>
     
         
 

@@ -16,8 +16,8 @@
 </head>
 
 <div class="row title">
-        <div class="col-lg-2 col-md-3"><img class="logo1" src="../static/images/logo.png" alt=""></div>
-        <div class="col-lg-10 col-md-9"><p class="reg">Login</p></div>
+        <div class="col-lg-2 col-md-3 col-4"><img class="logo1" src="../static/images/logo.png" alt=""></div>
+        <div class="col-lg-10 col-md-9 col-8"><p class="reg">Login</p></div>
     </div>
     
     <div class="content">
@@ -27,7 +27,7 @@
             {{ form.hidden_tag() }}
             <div class="form">
                 <div class="row">
-                    <div class="col-lg-1 av"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-2 av"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                    
                       {% if form.email.errors %}
                          {{ form.email(class="user-input") }}
@@ -37,7 +37,7 @@
                                 {% endfor %}
                         </div>
                     {% else %}
-                    <div class="col-lg-11">
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-10">
                         {{ form.email(class="user-input",placeholder='email') }}
                     </div>
                     {% endif %}
@@ -47,7 +47,7 @@
             </div>
             <div class="form">
                     <div class="row">
-                        <div class="col-lg-1 av"><i class="fa fa-unlock-alt" aria-hidden="true"></i></div>
+                        <div class="col-lg-1  col-md-1 col-sm-1 col-2  av"><i class="fa fa-unlock-alt" aria-hidden="true"></i></div>
                         {% if form.password.errors %}
                             {{ form.password(class="user-input") }}
                             <div class="invalid-feedback">
@@ -56,7 +56,7 @@
                                     {% endfor %}
                             </div>
                             {% else %}
-                            <div class="col-lg-11">
+                            <div class="col-lg-11 col-md-11 col-sm-11 col-10">
                                 {{ form.password(class="user-input",placeholder='password') }}
                             </div>
                             {% endif %}
@@ -65,10 +65,7 @@
                    
             </div>
             
-            <div class="form-check">
-                    {{ form.remember(class="form-check-input") }}
-                    {{ form.remember.label(class="form-check-label") }}
-            </div>
+          
             
             <div class="button">
                 {{ form.submit(class="btn") }}
@@ -80,6 +77,12 @@
         </div>
     
     </div>
-   
+   <pre>
+       
+    
+    
+    
+    
+   </pre>
 {% endblock content %}
 

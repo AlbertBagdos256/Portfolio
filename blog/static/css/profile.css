@@ -149,8 +149,10 @@ h1 {
 }
 .delete {
     background: rgb(107, 6, 25) !important;
-    margin-top: 25px;
-    margin-left: 10px;
+    margin-top: -63px;
+    margin-left: 95px;
+    
+    
 }
 .update {
     background: rgb(18, 18, 126) !important;
@@ -223,7 +225,9 @@ i {
     bottom: 16px;
     z-index: 10;
 }
-
+.post_img {
+    width: 240px !important;
+}
 @media(max-width: 800px) {
     .profile-image {
         width: 300px;

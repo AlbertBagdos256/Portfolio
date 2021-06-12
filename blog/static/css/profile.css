@@ -151,12 +151,13 @@ h1 {
     background: rgb(107, 6, 25) !important;
     margin-top: -63px;
     margin-left: 95px;
-    
+    z-index: 10;
     
 }
 .update {
     background: rgb(18, 18, 126) !important;
     margin-top: 25px;
+    z-index: 10;
 }
 .details {
     background: burlywood !important;

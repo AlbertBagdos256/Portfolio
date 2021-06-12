@@ -26,35 +26,42 @@
                    <img class="logo" src="../static/images/logo.png" alt="">
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                   <a href="{{url_for('main.index')}}" class="nav-link">
                     <span class="link-text">Main Page</span>
+                    <img class="mob-log"  src="../static/images/logo.png" alt="">
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item kk">
                   <a href="{{url_for('users.account')}}" class="nav-link">
                     <span class="link-text">Profile</span>
+                    <i class="fa fa-user mob-fa" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">
                     <span class="link-text">Posts</span>
+                    <i class="fa fa-address-card mob-fa" aria-hidden="true"></i>
                   </a>
                 </li>
                
                 <li class="nav-item" id="themeButton">
                   <a href="{{url_for('users.register')}}" class="nav-link">
                 <span class="link-text">Registration</span>   
+                <i class="fa fa-registered mob-fa" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li class="nav-item" id="themeButton">
                     <a href="{{url_for('users.login')}}" class="nav-link">
-                     <span class="link-text">Login</span>            
+                     <span class="link-text">Login</span>
+                     <i class="fa fa-plus-square mob-fa" aria-hidden="true"></i>   
                     </a>
                   </li>
                   <li class="nav-item" id="themeButton">
                     <a href="{{url_for('users.logout')}}" class="nav-link">
-                     <span class="link-text">Logout</span>            
+                     <span class="link-text">Logout</span> 
+                     <i class="fa fa-times mob-fa xx" aria-hidden="true"></i>
+                           
                     </a>
                   </li>
               </ul>

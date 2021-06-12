@@ -167,6 +167,8 @@ img{
     border-radius: 10px;
 }
 
+
+
 .post {
     background: #4D1B24 !important;
 }
@@ -175,7 +177,6 @@ img{
     bottom: 80px;
     right: 20px;
 }
-
 
 
 @media(max-width: 800px) {

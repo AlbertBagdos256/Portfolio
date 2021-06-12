@@ -2,6 +2,7 @@ from flask_fontawesome import FontAwesome
 from blog.config import Config
 from flask import Flask
 
+from blog.commands import create_tables
 from blog.models import bcrypt
 from blog.models import login_manager
 from blog.models import db
